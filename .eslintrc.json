@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "EXPERIMENTAL_useProjectService": true
+  },
+  "plugins": ["@typescript-eslint", "tsdoc"],
+  "rules": {
+    "tsdoc/syntax": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs"],
+      "extends": ["plugin:@typescript-eslint/disable-type-checked"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "tsdoc/syntax": "off"
+      }
+    }
+  ],
+  "root": true
+}

@@ -1,0 +1,68 @@
+{
+  "name": "is-x-maintained",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Jeremy Nguyen <hi@jeremy.ng> (https://jeremy.ng)",
+  "repository": "github:jeremy-code/is-x-maintained",
+  "homepage": "https://github.com/jeremy-code/is-x-maintained#readme",
+  "imports": {
+    "#*": [
+      "./src/*",
+      "./src/*.ts",
+      "./src/*.tsx",
+      "./src/*/index.ts",
+      "./src/*/index.tsx"
+    ]
+  },
+  "scripts": {
+    "prepack": "husky",
+    "dev": "next dev",
+    "ui:add": "yarn dlx shadcn-ui@latest add",
+    "build": "next build",
+    "build:analyze": "cross-env ANALYZE=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "format:fix": "prettier 'src/**/*.{js,jsx,ts,tsx,json}' --write"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^14.2.0-canary.11",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "next": "^14.2.0-canary.11",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "autoprefixer": "^10.4.18",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.3",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.4.2"
+  },
+  "dependenciesMeta": {
+    "@ianvs/prettier-plugin-sort-imports@4.1.1": {
+      "unplugged": true
+    }
+  },
+  "packageManager": "yarn@4.1.1+sha256.f3cc0eda8e5560e529c7147565b30faa43b4e472d90e8634d7134a37c7f59781"
+}
