@@ -53,7 +53,20 @@
   * {
     @apply border-border;
   }
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply h-full;
+  }
+  body {
+    @apply bg-background text-foreground flex flex-col;
+
+    main {
+      @apply flex-[1_0_auto];
+    }
+
+    header,
+    footer {
+      @apply flex-none;
+    }
   }
 }

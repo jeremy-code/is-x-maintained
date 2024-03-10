@@ -18,7 +18,7 @@
   "scripts": {
     "prepack": "husky",
     "dev": "next dev",
-    "ui:add": "yarn dlx shadcn-ui@latest add",
+    "ui:add": "yarn dlx shadcn-ui@latest add && mv ./#components/ui/* ./src/components/ui/ && rm -rf ./#components",
     "build": "next build",
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
@@ -29,10 +29,12 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.2.0-canary.11",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cmdk": "^1.0.0",
     "next": "^14.2.0-canary.11",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",

@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 
 import { AppProvider } from "#components/AppProvider";
+import { Footer } from "#components/Footer";
+import { Navbar } from "#components/Navbar";
 
 import "./globals.css";
 
@@ -14,10 +17,16 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
+  const nonce = headers().get("x-nonce") ?? undefined;
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider nonce={nonce}>
+          <Navbar />
+          {children}
+          <Footer />
+        </AppProvider>
       </body>
     </html>
   );

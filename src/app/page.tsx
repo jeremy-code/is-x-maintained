@@ -2,10 +2,10 @@ import { Button } from "#components/ui";
 
 const Home = () => {
   return (
-    <div>
+    <main className="container my-8">
       Test
       <Button>Test</Button>
-    </div>
+    </main>
   );
 };
 

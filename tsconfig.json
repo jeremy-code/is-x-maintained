@@ -13,6 +13,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "moduleDetection": "force",
+    "strictNullChecks": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
